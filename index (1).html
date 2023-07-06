@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Krista King Portfolio</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <nav class="navbar transparent">
+    <ul>
+      <li><a href="#content2">Work</a></li>
+      <li><a href="#content1">About</a></li>
+      <li><a href="#content3">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <div class="cd">
+      <button class="developedbykrista" onclick="scrollToContent('content2')">
+        <img src="cd.png" alt="Developed by Krista">
+        <span class="developbutton-text">Projects</span>
+      </button>
+    </div>
+    <div class="phone">
+      <button class="talk-button" onclick="scrollToContent('content3')">
+        <img src="image-removebg-preview (10).png" alt="talk-button">
+        <span class="talkbutton-text">Talk to Me</span>
+      </button>
+    </div>
+    <div class="container">
+      <h2 class="main-title" onclick="scrollToContent('content1')">Krista King</h2>
+
+      <img src="2000s media.jpg" class="bg1" alt="" />
+      <!--This image was AI generated-->
+    </div>
+    <div id="content1">
+      <div class="headshot-container">
+    <img src="headshot.jpg" alt="Headshot">
+  </div>
+      <div class="content-images">
+        <div class="aboutmetitle"
+          <h4 class="about-metitle">About Me</h4>
+        </div>
+        <div class=abouttext>
+        <p class="abouttext">
+          I am Krista, a passionate student who believes in the power of art and accesibility.
+          <br>
+          I am currently a junior at Bosse High School (located in Evansville, IN). From volunteering to web development
+          I thrive in helping others.
+        </p>
+      </div>
+      </div>
+      <div class="languagess">
+        <img class="languagess">
+        <img src="languagess.png">
+        </img>
+      </div>
+      <div id="content2">
+        <div class="content-images2">
+          <div class="projecttitle" <h4>Projects</h4>
+          </div>
+          <div class="tile-container">
+            <div class="tile1" onclick="navigateToLink('https://unit-2-project--kristaking.repl.co/#FYV101')">Find Your
+              Voice</div>
+            <div class="tile2" onclick="navigateToLink('https://unit-3-project.kristaking.repl.co/')">Whirlwind</div>
+            <div class="tile3" onclick="navigateToLink('https://drum-kit.kristaking.repl.co/')">Drumkit</div>
+            <div class="tile4" onclick="navigateToLink('https://clocl.kristaking.repl.co/')">Clock</div>
+          </div>
+          <div id="project1" class="project-details">A web-development project designed to connect volunteers with
+            non-profits.</div>
+          <div id="project2" class="project-details">Project 2 Details</div>
+          <div id="project3" class="project-details">Project 3 Details</div>
+          <div id="project4" class="project-details">Project 4 Details</div>
+        </div>
+        <div id="content3">
+          <div class="content-images3">
+            <div class="contactmetitle" <h4>Contact</h4>
+            </div>
+            <img class="contact-phone">
+            <img src="phone!.png" alt="contact-phone">
+            <button class="github-button">
+              <img src="github.png" alt="Github Button">
+            </button>
+            <button class="linkedin-button">
+              <img src="linkedin.png" alt="Linkedin Button">
+            </button>
+            <button class="indeed-button">
+              <img src="indeed.png" alt="Indeed Button">
+            </button>
+            <button class="instagram-button">
+              <img src="instagram.png" alt="Instagram Button">
+            </button>
+            <button class="facebook-button">
+              <img src="facebook.png" alt="Facebook Button">
+            </button>
+             <button class="gmail-button">
+              <img src="gmail.png" alt="Gmail Button">
+            </button>
+              <button class="dribble-button">
+              <img src="dribble.png" alt="Dribble Button">
+            </button>
+             <button class="fiverr-button">
+              <img src="fiverr.png" alt="Fiverr Button">
+            </button>
+             <button class="stack-button">
+              <img src="stack.png" alt="Stack Button">
+            </button>
+<button class="sound-button">Sound On</button>
+            <audio class="beep"src="Untitled video - Made with Clipchamp.mp4"></audio>
+            <div class="containerform">
+              <div class="contactmessage" <h2> I'm unable to come to the phone right now. Leave your name and number, and I'll return your call as soon as I'm free. Thank you.</h2>
+              <form id="submit-to-google-sheet">
+                <input name="name" type="name" placeholder="name" required>
+                <br>
+                <br>
+                <input name="email" type="email" placeholder="email" required>
+                <br>
+                <br>
+                <input name="phone-number" type="phone-number" placeholder="phone-number" required>
+                <br>
+                <br>
+                <input name="message" type="message" placeholder="message" optional>
+                <br>
+                <br>
+                <button class="submit">Shoot Message</button>
+              </form>
+              </div>
+            </div>
+            <script>
+              const scriptURL = "https://script.google.com/macros/s/AKfycbw714g2hvR6srNXX1n5fsXNUBPYfA2BJVjIADHBuS7b6MlgnzA_zw6kHkxUcrYUKAzdIw/exec"
+              const form = document.forms['submit-to-google-sheet']
+              form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, {method: 'POST', body: new FormData(form)})
+                  .then(response => console.log('Success!', response))
+                  .catch(error => console.error('Fill this out:', error.message))
+              })
+            </script>
+          </div>
+        </div>
+        <script <script src="./script.js"></script>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
+</style>
+</head>

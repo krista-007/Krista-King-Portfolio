@@ -1,0 +1,853 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+}
+.container {
+  max-width: 100%;
+}
+body{
+    width: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  /* rgba values: red, green, blue, alpha */
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: background-color 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, sans-serif;
+  color: white;
+  height: 55px;
+}
+
+.navbar.transparent {
+  background-color: transparent;
+}
+
+.navbar.solid {
+  background-color: rgb(43, 136, 144);
+  opacity: 0.8;
+  border-width: 3px;
+  color: white;
+  backdrop-filter: blur(15px);
+  /* Adjusted the blur amount as desired */
+
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-right: 50px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  /* text color */
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.developedbykrista {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transform-origin: center center;
+  transform: translate(5%, 230%) rotate(0deg);
+  position: fixed;
+}
+
+.developedbykrista:hover {
+  animation: spin 2s infinite linear;
+  /* Start the animation on hover */
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(5%, 230%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(5%, 230%) rotate(360deg);
+  }
+}
+
+.developbutton-text {
+  display: inline-block;
+  top: 30%;
+  left: 2%;
+  transform: translate(380%, -100%);
+  position: absolute;
+}
+
+.talk-button {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transform: translate(30%, 60%) rotate(0deg);
+}
+
+.talk-button:hover {
+  animation: vibrate 0.5s infinite linear;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translate(30%, 60%) rotate(0deg);
+  }
+
+  20% {
+    transform: translate(31%, 59%) rotate(2deg);
+  }
+
+  40% {
+    transform: translate(29%, 61%) rotate(-2deg);
+  }
+
+  60% {
+    transform: translate(31%, 59%) rotate(2deg);
+  }
+
+  80% {
+    transform: translate(29%, 61%) rotate(-2deg);
+  }
+
+  100% {
+    transform: translate(30%, 60%) rotate(0deg);
+  }
+}
+
+.talkbutton-text {
+  position: absolute;
+  top: 30%;
+  left: 43%;
+  transform: translate(-50%, -50%) rotate(-20deg);
+  color: white;
+  font-size: 14px;
+  z-index: 2;
+}
+
+.container {
+  height: 100vh;
+}
+
+.container img {
+  width: 100%;
+  position: absolute;
+  height: 110vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.main-title {
+  position: absolute;
+  top: 60%;
+  left: 35%;
+  font-size: 3rem;
+  animation: glitch 5s infinite;
+  cursor: pointer;
+  transform: perspective(500px) rotateX(45deg) rotateZ(45deg);
+  transform-style: preserve-3d;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(75px, 75px);
+    color: red;
+  }
+
+  15% {
+    transform: translate(-80px, 75px);
+    color: orange;
+  }
+
+  25% {
+    transform: translate(-75px, -90px);
+    color: yellow;
+  }
+
+  50% {
+    transform: translate(90px, -75px);
+    color: green;
+  }
+
+  60% {
+    transform: translate(-70px, 90);
+    color: blue;
+  }
+
+  75% {
+    transform: translate(-90px, 75px);
+    color: indigo;
+  }
+
+  100% {
+    transform: translate(80px, 98px);
+    color: violet;
+  }
+}
+
+.about-metitle {
+  font-size: 30px;
+  position: relative;
+  right: 50px;
+  margin-top: 10px;
+  /* Adjust the value as desired */
+}
+
+#content1 {
+  max-width: 100vw;
+  background-color: #060918;
+  min-height: 100vh;
+  z-index: 2;
+  /*z index helps identify order of objects*/
+  position: absolute;
+}
+.headshot-container {
+      float: left;
+      width: 50%; /* Adjust the width as per your preference */
+    }
+    
+    .headshot-container img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .content {
+      float: left;
+      width: 50%;
+      /* Add any other styles for the content section */
+    }
+.content-images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 110vh;
+  text-align: center;
+  position: relative;
+  max-width: 100%;
+}
+
+#content2 {
+  width: 100%;
+  background-color: #060918;
+  min-height: 150vh;
+  z-index: 2;
+  /*z index helps identify order of objects*/
+  position: absolute;
+}
+
+.projecttitle {
+  height: 10vh;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 70px;
+  font-family: Papyrus;
+  margin-top: 50px;
+}
+
+.content-images2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 110vh;
+  text-align: center;
+  position: relative;
+}
+
+.tile-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contactmetitle {
+  height: 10vh;
+  align-items: left;
+  position: absolute;
+  top: 0;
+  left: 80px;
+  right: 0;
+  text-align: center;
+  font-size: 30px;
+  justify-content: flex-start;
+  display: flex;
+  font-family: Papyrus;
+}
+
+.tile1 {
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
+  margin: 10px;
+  cursor: pointer;
+  background-image: url("connect.png");
+  background-size: cover;
+  background-position: center;
+  color: #298690;
+}
+
+.tile2 {
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
+  margin: 10px;
+  cursor: pointer;
+  background-image: url("cowboy.png");
+  background-size: cover;
+  background-position: center;
+  color: #298690;
+}
+
+.tile3 {
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
+  margin: 10px;
+  cursor: pointer;
+  background-image: url("drum.png");
+  background-size: cover;
+  background-position: center;
+  color: #298690;
+}
+
+.tile4 {
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
+  margin: 10px;
+  cursor: pointer;
+  background-image: url("clock.png");
+  background-size: cover;
+  background-position: center;
+  color: #298690;
+}
+
+.tile1:hover {
+  background-color: transparent;
+  transform: scale(1.05);
+  border-color: lightgray;
+  box-shadow: 0 0 1rem white;
+  backdrop-filter: blur(5px);
+}
+
+.tile2:hover {
+  background-color: transparent;
+  transform: scale(1.05);
+  border-color: lightgrey;
+  box-shadow: 0 0 1rem white;
+  backdrop-filter: blur(5px);
+}
+
+.tile3:hover {
+  background-color: transparent;
+  transform: scale(1.05);
+  border-color: lightgrey;
+  box-shadow: 0 0 1rem white;
+  backdrop-filter: blur(5px);
+}
+
+.tile4:hover {
+  background-color: transparent;
+  transform: scale(1.05);
+  border-color: lightgrey;
+  box-shadow: 0 0 1rem white;
+  backdrop-filter: blur(5px);
+}
+
+.project-details {
+  display: none;
+  background-color: #f5f5f5;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.show {
+  display: block;
+}
+
+#content3 {
+  width: 100%;
+  background-color: #060918;
+  max-height: 110vh;
+  z-index: 2;
+  /*z index helps identify order of objects*/
+  position: absolute;
+}
+
+.content-images3 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 110vh;
+  text-align: center;
+  position: relative;
+}
+
+
+.abouttext {
+    
+
+  color: white;
+  font-family: Palatino Sans;
+  font-size: 35px;
+  margin-top: 50px;
+  margin-left: 1%; /* Moves the element to the right half of the page */
+  transform: translateX(-50%); /* Centers the element horizontally */
+  width: 200%
+}
+
+
+.languagess {
+  margin-top: -1px;
+  margin-left: 650px;
+}
+
+
+.aboutmetitle {
+  align-items: flex-end;
+  text-align: right;
+  font-size: 50px;
+  justify-content: flex-end;
+  display: flex;
+  padding-left:300px; /* Adjust the padding as needed */
+  font-family: Papyrus;
+  font-weight: bold;
+  margin-top: -450px;
+}
+.text2 {
+  padding: 2 rem 20 rem;
+  font-size: 2.1 rem;
+  color: white;
+}
+
+.text3 {
+  padding: 2 rem 20 rem;
+  font-size: 2.1 rem;
+  color: white;
+}
+
+.bg1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.contact-phone {
+  margin-bottom: 10%;
+  padding-left: 30px;
+  position: relative;
+  z-index: 1;
+  overflow: auto;
+  /* Add overflow property to create a new block formatting context */
+}
+.sound-button{
+  background: purple;
+  border-radius: 10px;
+  width: -50px;
+  z-index: 2;
+  right: 800px;
+  position: absolute;
+  top: 105px;
+  cursor: pointer;
+}
+.sound-button:hover {
+  transform: scale(1.05);
+  border-color: green;
+  box-shadow: 0 0 1rem green;
+}
+.github-button {
+  position: absolute;
+  z-index: 2;
+  background-color: black;
+  left: 246px;
+  /* Adjust the left value as desired */
+  top: 310px;
+  /* Adjust the top value as desired */
+  width: 4%;
+  height: 6.2%;
+  padding-left: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.github-button:hover {
+  transform: scale(1.05);
+  border-color: lightgrey;
+  box-shadow: 0 0 1rem white;
+}
+.github-button img {
+  display: block;
+  width: 130%;
+  height: 130%;
+  margin-left: -12px;
+  margin-top: -5px;
+  object-fit: cover;
+  object-position: center;
+  z-index: 2;
+}
+
+.linkedin-button {
+  position: absolute;
+  z-index: 2;
+  background-color: black;
+  left: 305px;
+  /* Adjust the left value as desired */
+  top: 310px;
+  /* Adjust the top value as desired */
+  width: 4%;
+  height: 6.2%;
+  padding-left: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.linkedin-button:hover {
+  transform: scale(1.05);
+  border-color: lightgrey;
+  box-shadow: 0 0 1rem white;
+}
+.linkedin-button img {
+  display: block;
+  width: 90%;
+  height: 80%;
+  margin-left: -10px;
+  object-fit: fill;
+  object-position: center;
+  z-index: 2;
+}
+
+.indeed-button {
+  position: absolute;
+  z-index: 2;
+  background-color: black;
+  left: 360px;
+  /* Adjust the left value as desired */
+  top: 310px;
+  /* Adjust the top value as desired */
+  width: 4%;
+  height: 6.2%;
+  padding-left: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  
+}
+.indeed-button:hover {
+  transform: scale(1.05);
+  border-color: lightgrey;
+  box-shadow: 0 0 1rem white;
+}
+
+.indeed-button img {
+  display: block;
+  width: 90%;
+  height: 80%;
+  margin-left: -10px;
+  object-fit: fill;
+  object-position: center;
+  z-index: 2;
+}
+.instagram-button {
+  position: absolute;
+  z-index: 2;
+  background-color: black;
+  left: 360px;
+  /* Adjust the left value as desired */
+  top: 355px;
+  /* Adjust the top value as desired */
+  width: 4%;
+  height: 6.2%;
+  padding-left: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.instagram-button:hover {
+  transform: scale(1.05);
+  border-color: lightgrey;
+  box-shadow: 0 0 1rem white;
+}
+.instagram-button img {
+  display: block;
+  width: 110%;
+  height: 80%;
+  margin-left: -10px;
+  object-fit: fill;
+  object-position: center;
+  z-index: 2;
+}
+.facebook-button {
+  position: absolute;
+  z-index: 2;
+  background-color: black;
+  left: 305px;
+  /* Adjust the left value as desired */
+  top: 355px;
+  /* Adjust the top value as desired */
+  width: 4%;
+  height: 6.2%;
+  padding-left: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.facebook-button:hover {
+  transform: scale(1.05);
+  border-color: lightgrey;
+  box-shadow: 0 0 1rem white;
+}
+.facebook-button img {
+  display: block;
+  width: 180%;
+  height: 80%;
+  margin-left: -20px;
+  object-fit: fill;
+  object-position: center;
+  z-index: 2;
+}
+.gmail-button {
+  position: absolute;
+  z-index: 2;
+  background-color: black;
+  left: 245px;
+  /* Adjust the left value as desired */
+  top: 355px;
+  /* Adjust the top value as desired */
+  width: 4%;
+  height: 6.2%;
+  padding-left: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.gmail-button:hover {
+  transform: scale(1.05);
+  border-color: lightgrey;
+  box-shadow: 0 0 1rem white;
+}
+.gmail-button img {
+  display: block;
+  width: 150%;
+  height: 80%;
+  margin-left: -15px;
+  object-fit: fill;
+  object-position: center;
+  z-index: 2;
+}
+.dribble-button {
+  position: absolute;
+  z-index: 2;
+  background-color: black;
+  left: 248px;
+  /* Adjust the left value as desired */
+  top: 400px;
+  /* Adjust the top value as desired */
+  width: 4%;
+  height: 6.2%;
+  padding-left: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.dribble-button:hover {
+  transform: scale(1.05);
+  border-color: lightgrey;
+  box-shadow: 0 0 1rem white;
+}
+.dribble-button img {
+  display: block;
+  width: 130%;
+  height: 80%;
+  margin-left: -15px;
+  object-fit: fill;
+  object-position: center;
+  z-index: 2;
+}
+.fiverr-button {
+  position: absolute;
+  z-index: 2;
+  background-color: black;
+  left: 305px;
+  /* Adjust the left value as desired */
+  top: 400px;
+  /* Adjust the top value as desired */
+  width: 4%;
+  height: 6.2%;
+  padding-left: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.fiverr-button:hover {
+  transform: scale(1.05);
+  border-color: lightgrey;
+  box-shadow: 0 0 1rem white;
+}
+.fiverr-button img {
+  display: block;
+  width: 130%;
+  height: 80%;
+  margin-left: -15px;
+  object-fit: fill;
+  object-position: center;
+  z-index: 2;
+}
+.stack-button {
+  position: absolute;
+  z-index: 2;
+  background-color: black;
+  left: 360px;
+  /* Adjust the left value as desired */
+  top: 400px;
+  /* Adjust the top value as desired */
+  width: 4%;
+  height: 6.2%;
+  padding-left: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.stack-button:hover {
+  transform: scale(1.05);
+  border-color: lightgrey;
+  box-shadow: 0 0 1rem white;
+}
+.stack-button img {
+  display: block;
+  width: 130%;
+  height: 80%;
+  margin-left: -15px;
+  object-fit: fill;
+  object-position: center;
+  z-index: 2;
+}
+.contactmessage{
+  font-family: Courier, monospace;
+  padding-right: 5px;
+  margin-top: -90px;
+}
+/* start of contact info box */
+.containerform {
+  height: 100vh;
+  /* Adjust the height to make it taller */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 95%;
+  /* Adjust the width to make it wider */
+  /* Adjust the width to make the container larger */
+  padding-right: 60px;
+}
+
+.containerform input {
+  border-radius: 10px;
+}
+
+.containerform input[name="name"] {
+  border-radius: 4px;
+  width: 350px;
+  height: 50px;
+  border: 1px solid black;
+  /* Set the initial border style */
+  box-shadow: 0 0 13px purple;
+  /* Add the glowing effect */
+  padding-left: 10px;
+  padding-right: 10px;
+  color: black;
+}
+
+.containerform input[name="email"] {
+  border-radius: 4px;
+  width: 350px;
+  height: 50px;
+  border: 1px solid black;
+  box-shadow: 0 0 13px purple;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: black;
+}
+
+.containerform input[name="phone-number"] {
+  border-radius: 4px;
+  width: 350px;
+  height: 50px;
+  border: 1px solid black;
+  box-shadow: 0 0 13px purple;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: black;
+}
+
+.containerform input[name="message"] {
+  border-radius: 4px;
+  width: 350px;
+  height: 50px;
+  border: 1px solid black;
+  box-shadow: 0 0 13px purple;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: black;
+}
+
+.submit {
+  background-color: white;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: background-color 0.8s ease;
+  padding: 10px 20px;
+  color: black;
+  width: 350px;
+  height: 50px;
+}
+
+.submit:hover {
+  background-color: black;
+}
+
+.submit {
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit::before {
+  content: "Shoot Message";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: purple;
+  transition: transform 0.3s ease;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.submit:hover::before {
+  transform: translateX(100%);
+}
